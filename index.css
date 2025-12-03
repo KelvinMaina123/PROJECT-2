@@ -1,0 +1,82 @@
+/* Tailwind v4 syntax */
+@import "tailwindcss/preflight"; /* reset */
+@tailwind utilities; /* all Tailwind utilities */
+
+/* Base layer with CSS variables and global styles */
+@layer base {
+  /* Root variables */
+  :root {
+    --primary: 220 90% 56%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 15% 56%;
+    --secondary-foreground: 0 0% 100%;
+    --background: 0 0% 100%;
+    --foreground: 210 15% 10%;
+    --border: 210 16% 93%;
+    --input: 210 16% 95%;
+    --ring: 220 80% 60%;
+    --safe: 140 60% 45%;
+    --safe-foreground: 0 0% 100%;
+    --warning: 40 90% 50%;
+    --warning-foreground: 0 0% 0%;
+    --danger: 0 70% 50%;
+    --danger-foreground: 0 0% 100%;
+    --critical: 0 60% 40%;
+    --critical-foreground: 0 0% 100%;
+    --muted: 210 15% 90%;
+    --muted-foreground: 210 15% 50%;
+    --accent: 300 80% 60%;
+    --accent-foreground: 0 0% 100%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 15% 10%;
+    --card: 0 0% 100%;
+    --card-foreground: 210 15% 10%;
+    --sidebar-background: 210 20% 15%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 220 90% 56%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 300 80% 60%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 210 16% 93%;
+    --sidebar-ring: 220 80% 60%;
+    --radius: 8px;
+    --shadow-glow: 0 0 8px rgba(59, 130, 246, 0.5);
+    --shadow-danger: 0 0 8px rgba(220, 38, 38, 0.5);
+    --gradient-primary: linear-gradient(to right, hsl(var(--primary)), hsl(var(--secondary)));
+  }
+
+  /* Dark mode overrides */
+  .dark {
+    --background: 210 15% 10%;
+    --foreground: 0 0% 100%;
+    --border: 210 16% 30%;
+    --primary: 210 80% 60%;
+    --secondary: 180 80% 60%;
+  }
+
+  /* Global resets */
+  * {
+    border-width: 1px;
+    border-style: solid;
+    border-color: hsl(var(--border));
+  }
+
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    margin: 0;
+    font-family: system-ui, sans-serif;
+  }
+
+  a {
+    color: hsl(var(--primary-foreground));
+    text-decoration: none;
+  }
+
+  button {
+    background-color: hsl(var(--primary));
+    color: hsl(var(--primary-foreground));
+    padding: 0.5rem 1rem; /* equivalent to px-4 py-2 */
+    border-radius: var(--radius);
+  }
+}
